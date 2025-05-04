@@ -12,7 +12,12 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.config({
     extends: ['next/core-web-vitals', 'next/typescript', 'prettier'],
+    plugins: ['perfectionist'],
     rules: {
+      'perfectionist/sort-enums': ['error'],
+      'perfectionist/sort-interfaces': ['error'],
+      'perfectionist/sort-object-types': ['error'],
+      'perfectionist/sort-objects': ['error'],
       'prefer-arrow-callback': ['error'],
     },
   }),
