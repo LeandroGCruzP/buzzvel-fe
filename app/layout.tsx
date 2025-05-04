@@ -1,22 +1,20 @@
-import type { Metadata } from "next";
-import { ReactNode } from "react";
-import "./globals.css";
+import type { Metadata } from 'next'
+import { ReactNode } from 'react'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: "Teach App",
-  description: "Teach students worldwide",
-};
+  title: 'Teach App',
+  description: 'Teach students worldwide',
+}
 
 interface RootLayoutProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className='antialiased'>
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
-  );
+  )
 }
