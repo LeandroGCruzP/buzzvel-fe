@@ -3,7 +3,7 @@ import { Header } from '~/components/Header'
 
 export default function Home() {
   return (
-    <div className="flex bg-red-50 text-white">
+    <div>
       <Header />
 
       <main>
