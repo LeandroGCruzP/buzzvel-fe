@@ -18,7 +18,7 @@ export function Column({ items, text }: ColumnProps) {
   return (
     <div>
       <div className="gap-2 py-3">
-        <span className="leading-[110.00000000000001%] font-medium tracking-[0%] text-white">
+        <span className="leading-[110.00000000000001%] font-medium tracking-normal text-white">
           {text}
         </span>
       </div>
@@ -27,7 +27,9 @@ export function Column({ items, text }: ColumnProps) {
         {hasItems &&
           items.map((item, index) => (
             <FooterLink key={`${index} - ${item.name}`}>
-              <span className="leading-[140%] tracking-[0%]">{item.name}</span>
+              <span className="leading-[140%] tracking-normal">
+                {item.name}
+              </span>
 
               <div>
                 {item.iconLeft && <ArrowIcon width={24} height={24} />}

@@ -10,7 +10,7 @@ export function Header() {
       </div>
 
       <div className="Buttons-group gap-4">
-        <div className="relative -right-1 rounded-full p-1 transition duration-200 hover:cursor-pointer hover:bg-gray-100">
+        <div className="hover:hover:bg-blue-gray-100 relative -right-1 cursor-pointer rounded-full p-1 transition duration-200">
           <MenuIcon height={24} width={24} />
         </div>
       </div>

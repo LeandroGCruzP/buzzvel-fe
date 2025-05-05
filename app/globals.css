@@ -41,6 +41,15 @@
     0 0 15px 0 rgba(0, 0, 0, 0.07), 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
+@layer utilities {
+  .font-heading-4 {
+    @apply mb-[5px] text-[2.5rem] leading-[110.00000000000001%] font-bold;
+  }
+  .font-body-m {
+    @apply leading-[150%];
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffffff;
