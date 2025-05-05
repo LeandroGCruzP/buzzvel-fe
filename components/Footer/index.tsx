@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logoImg from '~/assets/logo-colored-white.svg'
+import logoImg from '~/assets/logo-white.svg'
 import { Bottom } from './Bottom'
 import { Column, ColumnProps } from './Column'
 import { Columns } from './Columns'

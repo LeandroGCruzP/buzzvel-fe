@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logoImg from '~/assets/logo-colored-black.svg'
+import logoImg from '~/assets/logo-black.svg'
 import { MenuIcon } from '~/components/icons/menu-icon'
 
 export function Header() {
