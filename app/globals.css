@@ -8,6 +8,37 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-black: #000000;
+  --color-blue-100: #dbeafe;
+  --color-blue-600: #2563eb;
+  --color-blue-800: #1e40af;
+  --color-blue-gray-100: #f1f5f9;
+  --color-blue-gray-200: #e2e8f0;
+  --color-blue-gray-300: #cbd5e1;
+  --color-blue-gray-500: #64748b;
+  --color-blue-gray-600: #475569;
+  --color-blue-gray-700: #334155;
+  --color-blue-gray-900: #0f172a;
+  --color-cool-gray-20: #dde1e6;
+  --color-green-100: #dcfce7;
+  --color-green-800: #166534;
+  --color-orange-400: #fb923c;
+  --color-orange-600: #ea580c;
+  --color-purple-100: #f3e8ff;
+  --color-purple-800: #6b21a8;
+  --color-white: #ffffff;
+  --color-yellow-200: #fef08a;
+  --color-yellow-400: #facc15;
+
+  --color-shadow-dark-l:
+    0 0 6px 0 rgba(0, 0, 0, 0.07), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --color-shadow-dark-m:
+    0 0 4px 0 rgba(0, 0, 0, 0.07), 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --color-shadow-dark-xl:
+    0 0 10px 0 rgba(0, 0, 0, 0.07), 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --color-shadow-dark-xxl:
+    0 0 15px 0 rgba(0, 0, 0, 0.07), 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 @media (prefers-color-scheme: dark) {

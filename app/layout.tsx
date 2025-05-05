@@ -3,8 +3,8 @@ import { ReactNode } from 'react'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Teach App',
   description: 'Teach students worldwide',
+  title: 'Teach App',
 }
 
 interface RootLayoutProps {
