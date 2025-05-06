@@ -74,7 +74,7 @@ export function Section1() {
           />
         </div>
 
-        <div className="absolute right-[30vw] bottom-5">
+        <div className="absolute right-[25vw] bottom-5 -z-10 md:right-[40vw]">
           <Image
             src={iconsImg}
             alt="Logo company 1"
