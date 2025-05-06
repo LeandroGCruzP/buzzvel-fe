@@ -43,7 +43,7 @@ export function Section1() {
         </div>
       </div>
 
-      <div className="relative flex justify-around">
+      <div className="relative flex justify-between md:justify-around">
         <div className="relative left-0 z-10 mt-38">
           <div className="absolute -top-14 left-[50%] flex flex-col gap-2">
             <ChatBubble text="Turpis platea nunc mattis" />
