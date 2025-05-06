@@ -44,7 +44,7 @@ export function Section1() {
       </div>
 
       <div className="relative flex justify-between md:justify-around">
-        <div className="relative left-0 z-10 mt-38">
+        <div className="relative left-0 z-10 mt-38 md:mt-40">
           <div className="absolute -top-14 left-[50%] flex flex-col gap-2">
             <ChatBubble text="Turpis platea nunc mattis" />
             <ChatBubble text="Vitae viverra ut non" />
@@ -74,7 +74,7 @@ export function Section1() {
           />
         </div>
 
-        <div className="absolute right-[25vw] bottom-5 -z-10 md:right-[40vw]">
+        <div className="absolute bottom-5 left-7/10 -z-10 -translate-x-1/2 md:left-3/5">
           <Image
             src={iconsImg}
             alt="Logo company 1"
