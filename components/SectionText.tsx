@@ -75,14 +75,14 @@ export function SectionText(props: SectionTextProps) {
           <Button
             variant={props.buttons.button2?.variant}
             text={props.buttons.button2.text}
-            icon={props.buttons.button2?.icon}
+            iconLeft={props.buttons.button2?.iconLeft}
           />
         )}
         {props.buttons?.button3 && (
           <Button
             variant={props.buttons.button3?.variant}
             text={props.buttons.button3.text}
-            icon={props.buttons.button3?.icon}
+            iconLeft={props.buttons.button3?.iconLeft}
           />
         )}
       </div>

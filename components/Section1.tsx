@@ -23,7 +23,7 @@ export function Section1() {
           buttons={{
             button2: { text: 'Sign Up Now' },
             button3: {
-              icon: <PlayIcon width={24} height={24} />,
+              iconLeft: <PlayIcon width={24} height={24} />,
               text: 'View Demo',
               variant: 'transparent',
             },

@@ -4,7 +4,7 @@ import { FooterLink } from './BottomLink'
 
 export interface ColumnProps {
   items: Array<{
-    iconLeft?: boolean
+    // iconLeft?: boolean
     iconRight?: boolean
     isBeta?: boolean
     name: string
@@ -32,9 +32,15 @@ export function Column({ items, text }: ColumnProps) {
               </span>
 
               <div>
-                {item.iconLeft && <ArrowIcon width={24} height={24} />}
-                {item.isBeta && <Badge />}
-                {item.iconRight && <ArrowIcon width={24} height={24} />}
+                {/* {item.iconLeft && <ArrowIcon width={24} height={24} />} */}
+                {item.isBeta && <Badge text="BETA" size="sm" />}
+                {item.iconRight && (
+                  <ArrowIcon
+                    width={24}
+                    height={24}
+                    className="fill-blue-gray-200"
+                  />
+                )}
               </div>
             </FooterLink>
           ))}
