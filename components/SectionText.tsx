@@ -1,5 +1,8 @@
+import { JSX } from 'react'
 import { Button, type ButtonProps } from './Button'
 import { Line } from './icons/line'
+
+type Sizes = 'h4' | 'h6'
 
 interface SectionTextProps {
   alignment: 'left' | 'right'
@@ -7,8 +10,8 @@ interface SectionTextProps {
     button2?: ButtonProps
     button3?: ButtonProps
   }
-  caption?: string
-  headline1: string
+  // caption?: string
+  headline1?: string
   headline2?: string
   highlightWord?: string
   text: string
@@ -16,31 +19,56 @@ interface SectionTextProps {
 
 export function SectionText(props: SectionTextProps) {
   const alignmentJustify = props.alignment === 'left' ? 'start' : 'end'
-  const words = props.headline1.split(' ')
-  const headline = words.map((word, index) => {
-    const isHighlight = word === props.highlightWord
 
-    return (
-      <span key={index} className="relative mr-2 inline-block">
-        {isHighlight && (
-          <Line className="absolute top-[0.76em] -z-10 h-[18px] w-[113%]" />
-        )}
-        {word}
-      </span>
-    )
-  })
+  function renderHeadline(
+    headlineSize: Sizes,
+    headline?: string,
+    highlightWord?: string
+  ): JSX.Element[] | null {
+    if (!headline) return null
+
+    const highlightLineHeightClass: Record<Sizes, string> = {
+      h4: 'h-[21px]',
+      h6: 'h-[11px]',
+    }
+
+    const words = headline.split(' ')
+    const headlineElement = words.map((word, index) => {
+      const isHighlight = word === highlightWord
+      return (
+        <span key={index} className="relative mr-2 inline-block">
+          {isHighlight && (
+            <Line
+              className={`absolute top-[0.76em] -z-10 ${highlightLineHeightClass[headlineSize]} w-[113%]`}
+            />
+          )}
+          {word}
+        </span>
+      )
+    })
+
+    return headlineElement
+  }
 
   return (
     <div className={`flex flex-col gap-6 text-${props.alignment}`}>
-      <div className={`relative flex justify-${alignmentJustify} gap-2`}>
-        {props.caption && <p>{props.caption}</p>}
+      <div className={`relative flex flex-col items-${alignmentJustify} gap-2`}>
+        {/* {props.caption && <p>{props.caption}</p>} */}
         {props.headline1 && (
-          <h4 className="font-heading-4 flex flex-wrap">{headline}</h4>
+          <h4 className="flex flex-wrap">
+            {renderHeadline('h4', props.headline1, props.highlightWord)}
+          </h4>
         )}
-        {props.headline2 && <p>{props.headline2}</p>}
+        {props.headline2 && (
+          <h6 className="flex flex-wrap">
+            {renderHeadline('h6', props.headline2, props.highlightWord)}
+          </h6>
+        )}
       </div>
 
-      {props.text && <p className="font-body-m">{props.text}</p>}
+      {props.text && (
+        <p className={`font-body-m text-${alignmentJustify}`}>{props.text}</p>
+      )}
 
       <div className={`flex justify-${alignmentJustify} gap-6`}>
         {props.buttons?.button2 && (
