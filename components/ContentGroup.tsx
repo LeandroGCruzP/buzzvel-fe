@@ -1,15 +1,16 @@
 import { Button } from './Button'
-import { Badge } from './Footer/Badge'
+import { Badge, type BadgeProps } from './Footer/Badge'
 
 interface ContentGroupProps {
+  badge: BadgeProps
   description: string
   title: string
 }
 
-export function ContentGroup({ description, title }: ContentGroupProps) {
+export function ContentGroup({ badge, description, title }: ContentGroupProps) {
   return (
-    <div className="shadow-dark-xl relative max-w-[25.75rem] min-w-40 rounded-[10px] bg-white pt-6">
-      <Badge text="Featured" className="absolute top-4 left-4" />
+    <div className="shadow-dark-xl relative max-w-[25.75rem] rounded-[10px] bg-white pt-6">
+      <Badge {...badge} className="absolute top-4 left-4" />
 
       <div className="flex flex-col gap-2 px-4 pt-6">
         <span className="leading-[110%] font-medium">{title}</span>

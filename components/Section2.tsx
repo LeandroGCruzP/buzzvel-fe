@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import blobImg from '~/assets/blob.svg'
-import desktopImg from '~/assets/desktop.png'
+import desktopImg from '~/assets/desktop.svg'
 import starsImg from '~/assets/stars.svg'
 import { Button } from '~/components/Button'
 import { ContentGroup } from '~/components/ContentGroup'
@@ -33,12 +33,12 @@ export function Section2() {
         className="w-min pl-0 text-blue-600"
       />
 
-      <div className="relative flex flex-col items-center">
+      <div className="relative -mb-24 flex flex-col items-center">
         <Image
           src={blobImg}
           alt="blob image background"
           height={336.68}
-          className="absolute top-3 -left-9 -z-10"
+          className="absolute top-12 right-48 -z-10"
         />
 
         <Image
@@ -48,23 +48,42 @@ export function Section2() {
           className="absolute -top-38 -z-10"
         />
 
-        <Image
-          src={desktopImg}
-          alt="desktop image"
-          height={199.8829345703125}
-          className="min-h-[275px) h-auto max-h-[391px] w-full max-w-[600px] min-w-[347.89px]"
-        />
+        <div className="flex w-full justify-end">
+          <Image
+            src={desktopImg}
+            alt="desktop image"
+            height={350}
+            className="min-h-[350px) right-0 max-h-[391px]"
+          />
+        </div>
 
-        <div className="relative -top-20 left-[2.5625rem] flex gap-4">
+        <div className="relative -top-24 flex gap-4">
           <ContentGroup
+            badge={{
+              color: 'purple',
+              text: 'Featured',
+            }}
             title="The map of mathematics"
             description="Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse."
           />
-
           <ContentGroup
+            badge={{
+              color: 'blue',
+              text: 'Popular',
+            }}
             title="The map of mathematics"
             description="Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse."
           />
+          <div className="hidden md:block">
+            <ContentGroup
+              badge={{
+                color: 'green',
+                text: 'New',
+              }}
+              title="The map of mathematics"
+              description="Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse."
+            />
+          </div>
         </div>
       </div>
     </section>
