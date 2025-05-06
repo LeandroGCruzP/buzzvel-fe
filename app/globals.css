@@ -48,6 +48,25 @@
   .font-body-m {
     @apply leading-[150%];
   }
+  .font-body-xs {
+    @apply text-xs leading-[140%];
+  }
+  .font-body-l {
+    @apply text-lg leading-[160%];
+  }
+
+  .shadow-dark-l {
+    @apply shadow-[var(--color-shadow-dark-l)];
+  }
+  .shadow-dark-m {
+    @apply shadow-[var(--color-shadow-dark-m)];
+  }
+  .shadow-dark-xl {
+    @apply shadow-[var(--color-shadow-dark-xl)];
+  }
+  .shadow-dark-xxl {
+    @apply shadow-[var(--color-shadow-dark-xxl)];
+  }
 }
 
 @media (prefers-color-scheme: dark) {
