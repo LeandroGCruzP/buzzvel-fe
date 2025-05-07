@@ -8,7 +8,7 @@ export function Section6() {
     <section className="px-4 py-12">
       <SectionText alignment="left" headline2="What everyone says" />
 
-      <div className="relative flex gap-6 overflow-auto">
+      <div className="relative flex gap-6 overflow-auto py-1">
         <ContentBoxUser
           description="Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue nisi maecenas elit aliquet eu sed consectetur. Vitae quis cras vitae praesent morbi adipiscing purus consectetur mi."
           user={{
