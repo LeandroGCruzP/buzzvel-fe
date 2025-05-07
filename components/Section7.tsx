@@ -11,7 +11,7 @@ import { SectionText } from './SectionText'
 
 export function Section7() {
   return (
-    <section className="flex flex-col gap-16 px-4 py-12">
+    <section className="flex flex-col gap-16 px-4 py-12 lg:flex-row lg:items-center lg:gap-20 lg:p-20">
       <div className="flex flex-col">
         <SectionText
           alignment="left"
@@ -26,11 +26,11 @@ export function Section7() {
           iconRight={
             <ArrowIcon width={24} height={24} className="fill-blue-600" />
           }
-          className="w-min pl-0 text-blue-600"
+          className="w-min pl-0 text-blue-600 lg:pl-0"
         />
       </div>
 
-      <div className="relative flex flex-col items-start">
+      <div className="relative flex flex-col items-center">
         <Image
           src={blobImg}
           alt="blob image background"
@@ -42,7 +42,7 @@ export function Section7() {
           src={starsImg}
           alt="stars image background"
           height={554}
-          className="absolute -top-20 -right-4 -z-10"
+          className="absolute -top-20 right-[17rem] -z-10 lg:right-[6rem]"
         />
 
         <div className="flex flex-col gap-4">
