@@ -36,7 +36,7 @@ export function Button({
 
   const sizes: Record<ButtonSizes, string> = {
     lg: 'text-xl p-4',
-    md: 'py-3 px-7 lg:text-2xl lg:py-5 lg:px-6 lg:leading-[0.5px]',
+    md: `py-3 px-7 lg:py-5 lg:px-6 lg:leading-[0.5px] ${variant === 'transparent' ? 'lg:text-xl' : 'lg:text-2xl'}`,
     sm: 'text-sm py-2 px-5',
   }
 
