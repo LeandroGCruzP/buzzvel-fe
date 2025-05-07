@@ -5,7 +5,7 @@ import { ContentBox } from './ContentBox'
 
 export function Section5() {
   return (
-    <section className="bg-blue-gray-900 flex flex-col gap-12 px-4 py-12 text-yellow-400">
+    <section className="bg-blue-gray-900 flex flex-col gap-12 px-4 py-12 text-yellow-400 lg:flex-row lg:justify-around lg:p-20">
       <ContentBox
         icon={heartImg}
         alt="Heart icon"
