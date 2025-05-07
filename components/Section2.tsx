@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import blobImg from '~/assets/blob.svg'
 import desktopImg from '~/assets/desktop.svg'
 import starsImg from '~/assets/stars.svg'
@@ -9,6 +12,23 @@ import { LineItem } from '~/components/LineItem'
 import { SectionText } from '~/components/SectionText'
 
 export function Section2() {
+  const [isLargeScreen, setIsLargeScreen] = useState(false)
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024)
+    }
+
+    checkScreenSize()
+
+    window.addEventListener('resize', checkScreenSize)
+    return () => window.removeEventListener('resize', checkScreenSize)
+  }, [])
+
+  const text = isLargeScreen
+    ? undefined
+    : 'Sit elit feugiat turpis sed integer integer accumsan turpis. Sed suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices amet, dui sit suspendisse.'
+
   return (
     <section className="flex flex-col gap-8 px-4 py-12 lg:flex-row lg:gap-20 lg:p-20">
       <div className="flex flex-col gap-8">
@@ -16,7 +36,7 @@ export function Section2() {
           alignment="left"
           headline2="An all-in-one app that makes it easier"
           highlightWord="all-in-one"
-          text="Sit elit feugiat turpis sed integer integer accumsan turpis. Sed suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices amet, dui sit suspendisse."
+          text={text}
         />
 
         <div className="flex flex-col gap-4">

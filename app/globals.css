@@ -86,13 +86,6 @@ h4 {
   font-weight: 700;
 }
 
-@media (width >= 64rem) {
-  h4 {
-    font-size: 4.5rem;
-    font-weight: 800;
-  }
-}
-
 h5 {
   font-size: 2rem;
   line-height: 110%;
@@ -104,4 +97,16 @@ h6 {
   font-size: 1.5rem;
   line-height: 110%;
   font-weight: bold;
+}
+
+@media (width >= 64rem) {
+  h4 {
+    font-size: 4.5rem;
+    font-weight: 800;
+  }
+
+  h6 {
+    font-size: 3.5rem;
+    font-weight: 800;
+  }
 }
