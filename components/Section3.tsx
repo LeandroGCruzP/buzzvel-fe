@@ -3,7 +3,6 @@ import pictureImg from '~/assets/picture.png'
 import rectangleImg from '~/assets/rectangle.svg'
 import squareImg from '~/assets/squares.svg'
 import { ChatIcon } from './icons/chat-icon'
-import { PlaneIcon } from './icons/plane-icon'
 import { SliderCues } from './SliderCues'
 
 export function Section3() {
@@ -51,7 +50,7 @@ export function Section3() {
         />
       </div>
 
-      <PlaneIcon width={24} height={24} />
+      {/* <PlaneIcon width={24} height={24} /> */}
     </section>
   )
 }
