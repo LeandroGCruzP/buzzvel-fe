@@ -18,15 +18,18 @@ export function Section9() {
   }
 
   return (
-    <section className="bg-orange-600 px-4 py-12">
-      <div className="flex flex-col gap-8 text-white">
+    <section className="bg-orange-600 px-4 py-12 lg:gap-20 lg:p-20">
+      <div className="flex flex-col items-center gap-8 text-white">
         <h5 className="text-center">Ready for your next project?</h5>
 
-        <p className="text-center text-lg leading-[160%]">
+        <p className="text-center text-lg leading-[160%] lg:mb-[5px] lg:text-[32px] lg:font-light">
           Sit elit feugiat turpis sed integer integer accumsan turpis.
         </p>
 
-        <form className="flex flex-col items-center gap-4" onSubmit={onSubmit}>
+        <form
+          className="flex w-full max-w-[550px] flex-col items-center gap-4"
+          onSubmit={onSubmit}
+        >
           <Input
             name="email"
             required
@@ -38,6 +41,7 @@ export function Section9() {
             type="submit"
             text="Request Demo"
             variant="filled-dark"
+            size="lg"
             className="w-min"
           />
         </form>

@@ -7,7 +7,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 export function Input({ className, name, ...props }: InputProps) {
   const baseClasses =
-    'border-2 border-gray-300 rounded-[10px] p-2 bg-white outline-none text-blue-gray-900'
+    'border-2 border-gray-300 rounded-[10px] p-2 bg-white outline-none text-blue-gray-900 h-[50px]'
 
   return (
     <div className="grid w-full gap-4">
