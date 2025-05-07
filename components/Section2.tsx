@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import blobImg from '~/assets/blob.svg'
@@ -55,7 +56,13 @@ export function Section2() {
         />
       </div>
 
-      <div className="relative -mb-24 flex flex-col items-center">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeInOut' }}
+        viewport={{ once: true }}
+        className="relative -mb-24 flex flex-col items-center"
+      >
         <Image
           src={blobImg}
           alt="blob image background"
@@ -96,7 +103,7 @@ export function Section2() {
             title="The map of mathematics"
             description="Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse."
           />
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <ContentGroup
               badge={{
                 color: 'green',
@@ -107,7 +114,7 @@ export function Section2() {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }
