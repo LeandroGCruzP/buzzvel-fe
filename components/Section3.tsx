@@ -8,12 +8,12 @@ import { SliderCues } from './SliderCues'
 
 export function Section3() {
   return (
-    <section className="flex flex-col gap-12 border-b border-yellow-400 bg-yellow-400 px-4 py-12 lg:flex-row lg:gap-20">
+    <section className="flex flex-col gap-12 border-b border-yellow-400 bg-yellow-400 px-4 py-12 lg:flex-row lg:gap-20 lg:p-20">
       <div className="flex items-center gap-6">
         <ChevronForwardIcon
           width={48}
           height={48}
-          className="hidden rotate-180 fill-white lg:flex"
+          className="hidden rotate-180 cursor-pointer fill-white transition duration-200 hover:scale-110 lg:flex"
         />
 
         <div className="flex w-full flex-col gap-12">
@@ -71,7 +71,7 @@ export function Section3() {
         <ChevronForwardIcon
           width={48}
           height={48}
-          className="fill-blue-gray-900 hidden lg:flex"
+          className="fill-blue-gray-900 hidden cursor-pointer transition duration-200 hover:scale-110 lg:flex"
         />
       </div>
 
