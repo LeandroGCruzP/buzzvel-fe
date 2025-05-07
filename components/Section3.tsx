@@ -74,8 +74,6 @@ export function Section3() {
           className="fill-blue-gray-900 hidden cursor-pointer transition duration-200 hover:scale-110 lg:flex"
         />
       </div>
-
-      {/* <PlaneIcon width={24} height={24} /> */}
     </section>
   )
 }
