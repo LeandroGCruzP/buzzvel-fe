@@ -2,10 +2,11 @@ import { JSX } from 'react'
 import { Button, type ButtonProps } from './Button'
 import { Line } from './icons/line'
 
-type Sizes = 'h4' | 'h6'
+type SectionTextSizes = 'h4' | 'h6'
+type SectionTextAlignment = 'left' | 'right' | 'center'
 
 interface SectionTextProps {
-  alignment: 'left' | 'right'
+  alignment: SectionTextAlignment
   buttons?: {
     button2?: ButtonProps
     button3?: ButtonProps
@@ -18,16 +19,25 @@ interface SectionTextProps {
 }
 
 export function SectionText(props: SectionTextProps) {
-  const alignmentJustify = props.alignment === 'left' ? 'start' : 'end'
+  function getAlignmentClass(alignment: SectionTextAlignment) {
+    const collection: Record<SectionTextAlignment, string> = {
+      center: 'center',
+      left: 'start',
+      right: 'start',
+    }
+    return collection[alignment]
+  }
+
+  const alignmentJustify = getAlignmentClass(props.alignment)
 
   function renderHeadline(
-    headlineSize: Sizes,
+    headlineSize: SectionTextSizes,
     headline?: string,
     highlightWord?: string
   ): JSX.Element[] | null {
     if (!headline) return null
 
-    const highlightLineHeightClass: Record<Sizes, string> = {
+    const highlightLineHeightClass: Record<SectionTextSizes, string> = {
       h4: 'h-[21px]',
       h6: 'h-[11px]',
     }

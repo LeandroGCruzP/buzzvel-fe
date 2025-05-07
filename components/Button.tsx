@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 
 type ButtonVariants = 'filled' | 'transparent' | 'outline'
-type ButtonSizes = 'sm' | 'md'
+type ButtonSizes = 'sm' | 'md' | 'lg'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   iconLeft?: ReactNode
@@ -33,6 +33,7 @@ export function Button({
   }
 
   const sizes: Record<ButtonSizes, string> = {
+    lg: 'text-xl p-4',
     md: 'py-3 px-7',
     sm: 'text-sm py-2 px-5',
   }
