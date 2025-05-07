@@ -24,9 +24,11 @@ export function ContentGroup({
       <Badge {...badge} className="absolute top-4 left-4" />
 
       <div className="flex flex-col gap-2 px-4 pt-6">
-        <span className="leading-[110%] font-medium">{title}</span>
+        <span className="leading-[110%] font-medium lg:mb-[5px] lg:text-xl">
+          {title}
+        </span>
 
-        <p className="text-blue-gray-600 text-xs leading-[140%]">
+        <p className="text-blue-gray-600 text-xs leading-[140%] lg:text-[0.875rem]">
           {description}
         </p>
       </div>
