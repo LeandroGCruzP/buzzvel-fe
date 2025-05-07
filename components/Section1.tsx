@@ -13,8 +13,8 @@ import { SectionText } from '~/components/SectionText'
 
 export function Section1() {
   return (
-    <section className="flex flex-col gap-12 px-4 py-12">
-      <div className="flex flex-col gap-8">
+    <section className="flex flex-col gap-12 px-4 py-12 lg:flex-row lg:gap-20 lg:p-20">
+      <div className="flex flex-col gap-8 lg:justify-between">
         <SectionText
           alignment="left"
           headline1="Teach students worldwide"
@@ -30,20 +30,20 @@ export function Section1() {
           }}
         />
 
-        <div className="font-body-m flex flex-col gap-4">
-          <p>Trusted by leading companies</p>
+        <div className="flex flex-col gap-4 lg:flex-row lg:gap-12">
+          <p className="leading-[140%]">Trusted by leading companies</p>
 
           <div className="flex gap-6">
-            <Image src={company1Img} alt="Logo company 1" height={32} />
-            <Image src={company2Img} alt="Logo company 2" height={32} />
             <Image src={company3Img} alt="Logo company 3" height={32} />
+            <Image src={company2Img} alt="Logo company 2" height={32} />
             <Image src={company4Img} alt="Logo company 4" height={32} />
             <Image src={company5Img} alt="Logo company 5" height={32} />
+            <Image src={company1Img} alt="Logo company 1" height={32} />
           </div>
         </div>
       </div>
 
-      <div className="relative flex justify-between md:justify-around">
+      <div className="relative flex max-h-[544.52px] justify-between md:justify-around">
         <div className="relative left-0 z-10 mt-38 md:mt-40">
           <div className="absolute -top-14 left-[50%] flex flex-col gap-2">
             <ChatBubble text="Turpis platea nunc mattis" />

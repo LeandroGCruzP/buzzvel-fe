@@ -42,9 +42,6 @@
 }
 
 @layer utilities {
-  /* .font-heading-4 {
-    @apply mb-[5px] text-[2.5rem] leading-[110.00000000000001%] font-bold;
-  } */
   .font-body-m {
     @apply leading-[150%];
   }
@@ -86,7 +83,14 @@ body {
 h4 {
   font-size: 2.5rem;
   line-height: 110%;
-  font-weight: bold;
+  font-weight: 700;
+}
+
+@media (width >= 64rem) {
+  h4 {
+    font-size: 4.5rem;
+    font-weight: 800;
+  }
 }
 
 h5 {

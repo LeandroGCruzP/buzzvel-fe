@@ -10,28 +10,30 @@ import { SectionText } from '~/components/SectionText'
 
 export function Section2() {
   return (
-    <section className="flex flex-col gap-8 px-4 py-12">
-      <SectionText
-        alignment="left"
-        headline2="An all-in-one app that makes it easier"
-        highlightWord="all-in-one"
-        text="Sit elit feugiat turpis sed integer integer accumsan turpis. Sed suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices amet, dui sit suspendisse."
-      />
+    <section className="flex flex-col gap-8 px-4 py-12 lg:flex-row lg:gap-20 lg:p-20">
+      <div className="flex flex-col gap-8">
+        <SectionText
+          alignment="left"
+          headline2="An all-in-one app that makes it easier"
+          highlightWord="all-in-one"
+          text="Sit elit feugiat turpis sed integer integer accumsan turpis. Sed suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices amet, dui sit suspendisse."
+        />
 
-      <div className="flex flex-col gap-4">
-        <LineItem text="Est et in pharetra magna adipiscing ornare aliquam." />
-        <LineItem text="Tellus arcu sed consequat ac velit ut eu blandit." />
-        <LineItem text="Ullamcorper ornare in et egestas dolor orci." />
+        <div className="flex flex-col gap-4">
+          <LineItem text="Est et in pharetra magna adipiscing ornare aliquam." />
+          <LineItem text="Tellus arcu sed consequat ac velit ut eu blandit." />
+          <LineItem text="Ullamcorper ornare in et egestas dolor orci." />
+        </div>
+
+        <Button
+          variant="transparent"
+          text="Find more about the app"
+          iconRight={
+            <ArrowIcon width={24} height={24} className="fill-blue-600" />
+          }
+          className="w-min pl-0 text-blue-600"
+        />
       </div>
-
-      <Button
-        variant="transparent"
-        text="Find more about the app"
-        iconRight={
-          <ArrowIcon width={24} height={24} className="fill-blue-600" />
-        }
-        className="w-min pl-0 text-blue-600"
-      />
 
       <div className="relative -mb-24 flex flex-col items-center">
         <Image

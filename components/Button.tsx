@@ -22,7 +22,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseClasses =
-    'flex cursor-pointer rounded-lg capitalize transition duration-200 gap-4 justify-center font-medium leading-6 tracking-[0.5px]'
+    'flex cursor-pointer items-center rounded-lg capitalize transition duration-200 gap-4 justify-center font-medium leading-6 tracking-[0.5px]'
 
   const variants: Record<ButtonVariants, string> = {
     filled:
@@ -36,7 +36,7 @@ export function Button({
 
   const sizes: Record<ButtonSizes, string> = {
     lg: 'text-xl p-4',
-    md: 'py-3 px-7',
+    md: 'py-3 px-7 lg:text-2xl lg:py-5 lg:px-6 lg:leading-[0.5px]',
     sm: 'text-sm py-2 px-5',
   }
 

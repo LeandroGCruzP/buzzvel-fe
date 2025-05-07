@@ -38,8 +38,8 @@ export function SectionText(props: SectionTextProps) {
     if (!headline) return null
 
     const highlightLineHeightClass: Record<SectionTextSizes, string> = {
-      h4: 'h-[21px]',
-      h6: 'h-[11px]',
+      h4: 'h-[21px] lg:h-[30px]',
+      h6: 'h-[11px] lg:h-[20px]',
     }
 
     const words = headline.split(' ')
@@ -65,7 +65,7 @@ export function SectionText(props: SectionTextProps) {
       <div className={`relative flex flex-col items-${alignmentJustify} gap-2`}>
         {/* {props.caption && <p>{props.caption}</p>} */}
         {props.headline1 && (
-          <h4 className="flex flex-wrap">
+          <h4 className="flex flex-wrap lg:text-7xl">
             {renderHeadline('h4', props.headline1, props.highlightWord)}
           </h4>
         )}
@@ -77,7 +77,11 @@ export function SectionText(props: SectionTextProps) {
       </div>
 
       {props.text && (
-        <p className={`font-body-m text-${alignmentJustify}`}>{props.text}</p>
+        <p
+          className={`leading-[140%] lg:mb-[5px] lg:text-2xl lg:leading-[160%] text-${alignmentJustify}`}
+        >
+          {props.text}
+        </p>
       )}
 
       <div className={`flex justify-${alignmentJustify} gap-6`}>
