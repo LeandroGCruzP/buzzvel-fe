@@ -12,8 +12,8 @@ interface ContentBoxUserProps {
 export function ContentBoxUser({ description, user }: ContentBoxUserProps) {
   return (
     <div className="shadow-dark-l w-[309px] max-w-[412px] min-w-[309px] rounded-[20px]">
-      <div className="flex flex-col gap-2 p-4">
-        <p>{description}</p>
+      <div className="flex h-full flex-col justify-between gap-2 p-4">
+        <p className="text-lg leading-[160%]">{description}</p>
 
         <div className="flex gap-4 pt-4">
           <Image
