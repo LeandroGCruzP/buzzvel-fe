@@ -1,15 +1,26 @@
+import clsx from 'clsx'
+import { HTMLProps } from 'react'
 import { Button } from './Button'
 import { Badge, type BadgeProps } from './Footer/Badge'
 
-interface ContentGroupProps {
+interface ContentGroupProps extends HTMLProps<HTMLDivElement> {
   badge: BadgeProps
   description: string
   title: string
 }
 
-export function ContentGroup({ badge, description, title }: ContentGroupProps) {
+export function ContentGroup({
+  badge,
+  className,
+  description,
+  title,
+  ...props
+}: ContentGroupProps) {
+  const baseClasses =
+    'shadow-dark-xl relative max-w-[25.75rem] rounded-[10px] bg-white pt-6'
+
   return (
-    <div className="shadow-dark-xl relative max-w-[25.75rem] rounded-[10px] bg-white pt-6">
+    <div className={clsx(baseClasses, className)} {...props}>
       <Badge {...badge} className="absolute top-4 left-4" />
 
       <div className="flex flex-col gap-2 px-4 pt-6">

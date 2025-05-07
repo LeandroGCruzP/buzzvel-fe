@@ -10,7 +10,7 @@ import { Section9 } from '~/components/Section9'
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Section1 />
       <Section2 />
       <Section3 />
