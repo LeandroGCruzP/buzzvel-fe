@@ -1,12 +1,4 @@
-import { Roboto } from 'next/font/google'
 import Image, { StaticImageData } from 'next/image'
-
-const roboto = Roboto({
-  display: 'swap',
-  subsets: ['latin'],
-  variable: '--font-roboto',
-  weight: ['400', '500', '700'],
-})
 
 interface ContentBoxProps {
   alt: string
@@ -17,10 +9,10 @@ interface ContentBoxProps {
 
 export function ContentBox({ alt, description, icon, value }: ContentBoxProps) {
   return (
-    <div className={`flex flex-col items-center gap-2 ${roboto.className}`}>
+    <div className="flex flex-col items-center gap-2">
       <Image src={icon} alt={alt} height={64} width={64} />
       <span className="text-[3rem] leading-[110%] font-extrabold">{value}</span>
-      <span className="leading-[140%]">{description}</span>
+      <p className="leading-[140%]">{description}</p>
     </div>
   )
 }

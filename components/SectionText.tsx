@@ -14,7 +14,7 @@ interface SectionTextProps {
   headline1?: string
   headline2?: string
   highlightWord?: string
-  text: string
+  text?: string
 }
 
 export function SectionText(props: SectionTextProps) {
