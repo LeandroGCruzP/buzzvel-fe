@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 
-type ButtonVariants = 'filled' | 'transparent' | 'outline'
+type ButtonVariants = 'filled' | 'filled-dark' | 'transparent' | 'outline'
 type ButtonSizes = 'sm' | 'md' | 'lg'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -27,6 +27,8 @@ export function Button({
   const variants: Record<ButtonVariants, string> = {
     filled:
       'bg-orange-600 border-2 border-orange-600 text-white hover:brightness-110',
+    'filled-dark':
+      'bg-blue-gray-900 border-2 border-blue-gray-900 text-white hover:brightness-110',
     outline:
       'bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-gray-100',
     transparent: 'bg-transparent text-blue-600 hover:bg-blue-gray-100',
