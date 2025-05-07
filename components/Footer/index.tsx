@@ -54,9 +54,14 @@ const footerLinks: Array<ColumnProps> = [
 
 export function Footer() {
   return (
-    <footer className="bg-blue-gray-900 text-blue-gray-200 px-4">
+    <footer className="bg-blue-gray-900 text-blue-gray-200 px-4 lg:px-20">
       <Columns>
-        <Image src={logoImg} alt="Logo" height={35} />
+        <Image
+          src={logoImg}
+          alt="Logo"
+          height={35}
+          className="h-[35px] w-[120px] overflow-hidden object-cover object-left"
+        />
 
         {footerLinks.map((column, index) => (
           <Column
