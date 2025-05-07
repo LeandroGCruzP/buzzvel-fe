@@ -45,7 +45,7 @@ export function Section7() {
           className="absolute -top-20 right-[17rem] -z-10 lg:right-[6rem]"
         />
 
-        <div className="flex flex-col gap-4">
+        <div className="flex w-full flex-col items-center gap-4">
           <div className="flex items-end gap-4">
             <ContentGroup
               badge={{
